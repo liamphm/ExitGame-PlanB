@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Anmelden für coolen Content</title>
+      <style>
+         /* Verstecke den Hexadezimalcode, bis der Benutzer angemeldet ist */
+         #cont {
+         display: none;
+         }
+	 /* Verstecke das Bild, bis der Benutzer angemeldet ist */
+         #koi-img {
+         display: none;
+         }
+	 /* Textfelder und Layout werden definiert */
+         body {
+         font-family: Arial, sans-serif;
+         background-color: #f2f2f2;
+         margin: 0;
+         padding: 0;
+         }
+         .container {
+         max-width: 500px;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 10px rgba(0,0,0,0.3);
+         border-radius: 5px;
+         text-align: center;
+         }
+         input[type=text],
+         input[type=password] {
+         padding: 10px;
+         margin: 10px 0;
+         width: 100%;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         }
+         button[type=submit] {
+         background-color: #4CAF50;
+         color: #fff;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         }
+         button[type=submit]:hover {
+         background-color: #45a049;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h1>Anmelden</h1>
+         <form>
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="button" value="Anmelden" onclick="checkLogin()">
+         </form>
+         <!-- Bild von einem Koi-Karpfen -->
+         <img id="koi-img" src="https://www.blinker.de/content/uploads/2016/10/fish-1059268_1280.jpg" alt="Ein Koi-Karpfen" 
+            style="width:500px;height:333px;">
+         <txt id="cont" style="text-align:center;">
+         112FB0
+      </div>
+      <script>
+         function checkLogin() {
+           // Hier wird der Login-Code überprüft
+           const username = document.getElementById("username").value;
+           const password = document.getElementById("password").value;
+           if (username === "ExitGame" && password === "justdoit") {
+             // Zeige das Bild an
+             document.getElementById("cont").style.display = "block";
+             document.getElementById("koi-img").style.display = "block";
+             // Begrüßung des Benutzers
+             alert("Willkommen, " + username + "!");
+         
+           } else {
+             // Fehlermeldung anzeigen
+             alert("Falscher Benutzername oder Passwort.");
+           }
+         }
+      </script>	
+   </body>
+</html>
