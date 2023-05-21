@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class HexToDecimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Geben Sie einen Hexadezimalcode ein: ");
+        String hexCode = scanner.nextLine();
+        
+        try {
+            int decimal = Integer.parseInt(hexCode, 16);
+            System.out.println("Die Dezimalzahl ist: " + decimal);
+        } catch (NumberFormatException e) {
+            System.out.println("Ungültiger Hexadezimalcode.");
+        }
+        
+        scanner.close();
+    }
+}
