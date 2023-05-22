@@ -3,13 +3,13 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Private Notizen</title>
+      <title>Privates Notizbuch</title>
       <style>
          /* Verstecke den Hexadezimalcode (und weitere Informationen), bis der Benutzer angemeldet ist */
          #cont {
          display: none;
          }
-	 /* Textfelder und Layout werden definiert */
+         /* Textfelder und Layout werden definiert */
          body {
          font-family: Arial, sans-serif;
          background-color: #f2f2f2;
@@ -57,37 +57,41 @@
             <input type="password" id="password" name="password" required>
             <input type="button" value="Anmelden" onclick="checkLogin()">
          </form>
-<txt id="cont" style="text-align:center;">
-<br> <h2>Rezepte</h2>
-<div style="text-align:left;">
-<br>- <a href="https://www.chefkoch.de/rezepte/2397311379071757/">Käsespätzle (cremig und würzig)</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/3116351464617434/">Putenbrust mit Käuterquarkfüllung und Brunnenkresse</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/1737001282727848/">Milder Kohlrabieintopf</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/2988911451753876/Geschnetzeltes-Gyros-Art.html">Geschnetzeltes "Gyros Art"</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/2334881371737527/">Seelachs mit Kräuterbröseln</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/1909591311326700/">Vegetarischer Pfannkuchen mit Spinat-Champignon-Füllung</a>
-<br>- <a href="https://www.chefkoch.de/rezepte/1676831275660668/">Spargel in Vanillebutter mit Hacktournedos</a>
-</div>
-<br> <h2>Passwörter</h2>
-<div style="text-align:left;">
-<br>- SchlossVordereingang: 16753
-<br>- SchlossHintereingang: 97685
-<br>- SchlossKüchentür: 34870
-<br>- Fahrradschloss: 05347
-<br>- Schreibtischcode: 64857
-<br>- Handycode: 37825
-<br>- Safecode: 58767
-<br>- IPadcode: 78640
-</div>
-<br> <h2>Rätsel für die Putzfrau</h2>
-<div style="text-align:left;">
-<br>1. Ich bin die kleinste natürliche Zahl in unserem Zahlensystem. Was bin ich?
-<br>2. Ich bin die erste natürliche Primzahl. Was bin ich?
-<br>3. Ich bin die Quersumme von 840 - 739. Was bin ich?
-<br>4. Ich bin ein Buchstabe im Hexadezimalsystem. In der Dezimalschreibweise entspreche ich der Zahl 15. Was bin ich?
-<br>5. Ich bin ein Buchstabe im Hexadezimalsystem. Ich bin auch eine Ziffer im Dezimalsystem. Ich komme vor der Zahl 12. Was bin ich?
-<br>6. Ich bin eine einstellige Hexadezimalzahl, die in der binären Darstellung nur aus Nullen besteht. Was bin ich?
-</div>
+         <txt id="cont" style="text-align:center;">
+         <br> 
+         <h2>Rezepte</h2>
+         <div style="text-align:left;">
+            <br>- <a href="https://www.chefkoch.de/rezepte/2397311379071757/">Käsespätzle (cremig und würzig)</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/3116351464617434/">Putenbrust mit Käuterquarkfüllung und Brunnenkresse</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/1737001282727848/">Milder Kohlrabieintopf</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/2988911451753876/Geschnetzeltes-Gyros-Art.html">Geschnetzeltes "Gyros Art"</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/2334881371737527/">Seelachs mit Kräuterbröseln</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/1909591311326700/">Vegetarischer Pfannkuchen mit Spinat-Champignon-Füllung</a>
+            <br>- <a href="https://www.chefkoch.de/rezepte/1676831275660668/">Spargel in Vanillebutter mit Hacktournados</a>
+         </div>
+         <br> 
+         <h2>Passwörter</h2>
+         <div style="text-align:left;">
+            <br>- SchlossVordereingang: 1675513
+            <br>- SchlossHintereingang: 9751685
+            <br>- SchlossKüchentür: 3487510
+            <br>- Fahrradschloss: 0534847
+            <br>- Schreibtischcode: 6564857
+            <br>- Handycode: 3782556
+            <br>- Safecode: 5876748
+            <br>- IPadcode: 78640841
+            <br>- PW Router: 0101 0001 0001 1100 0010 0000 0000
+         </div>
+         <br> 
+         <h2>Rätsel für die Putzfrau</h2>
+         <div style="text-align:left;">
+            <br>1. Ich bin die kleinste natürliche Zahl in unserem Zahlensystem. Was bin ich?
+            <br>2. Ich bin die erste natürliche Primzahl. Was bin ich?
+            <br>3. Ich bin die Quersumme von 840 - 739. Was bin ich?
+            <br>4. Ich bin ein Buchstabe im Hexadezimalsystem. In der Dezimalschreibweise entspreche ich der Zahl 15. Was bin ich?
+            <br>5. Ich bin ein Buchstabe im Hexadezimalsystem. Ich bin auch eine Ziffer im Dezimalsystem. Ich komme vor der Zahl 12. Was bin ich?
+            <br>6. Ich bin eine einstellige Hexadezimalzahl, die in der binären Darstellung nur aus Nullen besteht. Was bin ich?
+         </div>
       </div>
       <script>
          function checkLogin() {
