@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Main extends JFrame {
+    private JTextField binaertextfeld;
+    private JLabel dezimallabel;
+
+    public Main() {
+        setTitle("Binär zu Dezimal");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 150);
+        setLocationRelativeTo(null);
+        setLayout(new GridLayout(2, 2));
+
+        JLabel binaryLabel = new JLabel("Binär Zahl:");
+        binaertextfeld = new JTextField();
+        dezimallabel = new JLabel();
+
+        JButton convertButton = new JButton("Umrechnen");
+        convertButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String binaerString = binaertextfeld.getText();
+                try {
+                    int dezimal = Integer.parseInt(binaerString, 2);
+                    dezimallabel.setText("Dezimal Zahl: " + dezimal);
+                } catch (NumberFormatException ex) {
+                    dezimallabel.setText("Üngültige Binär Zahl");
+                }
+            }
+        });
+
+        add(binaryLabel);
+        add(binaertextfeld);
+        add(convertButton);
+        add(dezimallabel);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+
+            public void run() {
+                Main converter = new Main();
+                converter.setVisible(true);
+            }
+        });
+    }
+}
