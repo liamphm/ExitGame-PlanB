@@ -1,0 +1,55 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Main extends JFrame {
+    private JTextField inputHexZahl;
+    private JLabel outputDezimalZahl;
+
+    public Main() {
+        setTitle("Hexadezimal zu Dezimalzahl");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 150);
+        setLocationRelativeTo(null);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+
+        inputHexZahl = new JTextField();
+        inputHexZahl.addActionListener(new ConvertButtonListener());
+
+        JButton convertButton = new JButton("Umrechnen");
+        convertButton.addActionListener(new ConvertButtonListener());
+
+        outputDezimalZahl = new JLabel("Dezimal: ");
+
+        panel.add(inputHexZahl, BorderLayout.NORTH);
+        panel.add(convertButton, BorderLayout.CENTER);
+        panel.add(outputDezimalZahl, BorderLayout.SOUTH);
+
+        add(panel);
+        setVisible(true);
+    }
+
+    private class ConvertButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String hexInput = inputHexZahl.getText();
+            try {
+                int dezimalWert = Integer.parseInt(hexInput, 16);
+                outputDezimalZahl.setText("Decimal: " + dezimalWert);
+            } catch (NumberFormatException ex) {
+                outputDezimalZahl.setText("Ungültiger Wert");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                new Main();
+            }
+        });
+    }
+}
